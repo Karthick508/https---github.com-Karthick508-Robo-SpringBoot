@@ -4,16 +4,23 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import net.minidev.json.JSONObject;
 
-import org.json.JSONObject;
+// import org.json.JSONObject;
+// import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+// import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.robo.login.entity.User;
+// import com.example.robo.login.entity.User;
 import com.example.robo.login.service.UsersService;
 
+
+@CrossOrigin(origins = "${client.url}")
 @RestController
 public class LoginController {
 
@@ -21,12 +28,10 @@ public class LoginController {
     UsersService usersService;
 
     @PostMapping("/login")
-    public List<LovJson> getLovListAsArrays(@RequestBody User body, final HttpServletRequest request,
-            HttpServletResponse response) {
+    public Object getPlanCodeForProposal(@RequestBody JSONObject json, final HttpServletRequest request,
+    HttpServletResponse response) {
+        List<User> userName = usersService.getUserName();
 
-
-                usersService.deleteUser(body);
-
-        return null;
+        return userName;
     }
 }

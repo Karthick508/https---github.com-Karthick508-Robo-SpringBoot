@@ -2,6 +2,8 @@ package com.example.robo.login.service;
 
 import java.util.List;
 
+// import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +17,9 @@ public class UsersServiceImpl implements UsersService {
     UsersRepo usersRepo;
 
     @Override
-    public void deleteUser(User user) {
-        usersRepo.save(user);
-    }
+    public List<User> getUserName() {
 
+        List<User> user = usersRepo.findAllUsers();
+        return user;
+    }
 }

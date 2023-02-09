@@ -13,16 +13,11 @@ import lombok.Data;
 public class User {
 
     @Id
-    @Column(name = "V_USER_NAME")
-    private String userName;
+    @Column(name = "id")
+    private Integer userId;
 
-    @Column(name = "V_PASSWORD")
-    private String password;
-
-    @Column(name = "V_ROLE")
-    private String role;
-
-    @Column(name = "V_STATUS")
-    private String status;
+    @Column(name = "name")
+    private String name;
+    
 
 }
