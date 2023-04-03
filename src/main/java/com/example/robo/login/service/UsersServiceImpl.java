@@ -1,25 +1,32 @@
 package com.example.robo.login.service;
 
-import java.util.List;
+
+// import org.hibernate.Session;
 
 // import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.robo.login.entity.User;
-import com.example.robo.login.repository.UsersRepo;
+// import com.example.robo.login.repository.UsersRepo;
 
 @Service
 public class UsersServiceImpl implements UsersService {
 
-    @Autowired
-    UsersRepo usersRepo;
-
     @Override
-    public List<User> getUserName() {
+    public Boolean ValidateUser(User user) {
 
-        List<User> user = usersRepo.findAllUsers();
-        return user;
+        // Session sess;
+
+        // User userObject = sess.getClass(User.class);
+        // //  new User();
+        // userObject.setName("karthi");
+        // userObject.setUserId("23");
+
+
+        return null;
+
     }
 }
+

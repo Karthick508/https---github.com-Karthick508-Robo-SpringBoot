@@ -1,10 +1,10 @@
 package com.example.robo.login.controller;
 
-import java.util.List;
+// import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import net.minidev.json.JSONObject;
+// import net.minidev.json.JSONObject;
 
 // import org.json.JSONObject;
 // import org.json.JSONObject;
@@ -19,7 +19,6 @@ import com.example.robo.login.entity.User;
 // import com.example.robo.login.entity.User;
 import com.example.robo.login.service.UsersService;
 
-
 @CrossOrigin(origins = "${client.url}")
 @RestController
 public class LoginController {
@@ -28,10 +27,11 @@ public class LoginController {
     UsersService usersService;
 
     @PostMapping("/login")
-    public Object getPlanCodeForProposal(@RequestBody JSONObject json, final HttpServletRequest request,
-    HttpServletResponse response) {
-        List<User> userName = usersService.getUserName();
+    public Boolean validateUser(@RequestBody User user, final HttpServletRequest request,
+            HttpServletResponse response) {
 
-        return userName;
+        Boolean boolean1 = usersService.ValidateUser(user);
+
+        return boolean1;
     }
 }

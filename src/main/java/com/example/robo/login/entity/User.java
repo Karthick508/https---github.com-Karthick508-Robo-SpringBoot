@@ -1,5 +1,6 @@
 package com.example.robo.login.entity;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -9,12 +10,11 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "USER")
+@Table(name="USER")
 public class User {
-
     @Id
     @Column(name = "id")
-    private Integer userId;
+    private String userId;
 
     @Column(name = "name")
     private String name;
