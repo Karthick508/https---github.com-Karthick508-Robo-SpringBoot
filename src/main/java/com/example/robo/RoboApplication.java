@@ -12,9 +12,9 @@ public class RoboApplication {
 		SpringApplication.run(RoboApplication.class, args);
 
 		// Hacker Rank For loop Questions
-		Loops hackerRankLoops = new Loops();
+		// Loops hackerRankLoops = new Loops();
 
-		hackerRankLoops.forLoop();
+		// hackerRankLoops.forLoop();
 	}
 
 }

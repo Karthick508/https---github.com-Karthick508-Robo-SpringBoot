@@ -1,5 +1,7 @@
 package com.example.robo.login.controller;
 
+import java.util.List;
+
 // import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,11 +29,11 @@ public class LoginController {
     UsersService usersService;
 
     @PostMapping("/login")
-    public Boolean validateUser(@RequestBody User user, final HttpServletRequest request,
+    public List<User> validateUser(@RequestBody User user, final HttpServletRequest request,
             HttpServletResponse response) {
 
-        Boolean boolean1 = usersService.ValidateUser(user);
+                List<User> cursorType =  usersService.executeCursorTypeProcedure();
 
-        return boolean1;
+        return cursorType;
     }
 }

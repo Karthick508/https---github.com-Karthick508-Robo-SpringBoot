@@ -10,14 +10,14 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="USER")
+@Table(name="USERS")
 public class User {
     @Id
-    @Column(name = "id")
-    private String userId;
+    @Column(name = "V_PASSWORD")
+    private String password;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "V_USER_NAME")
+    private String userName;
     
 
 }
