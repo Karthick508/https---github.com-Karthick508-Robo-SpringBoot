@@ -1,16 +1,14 @@
 package com.example.robo.loops;
 
 public class Loops {
-    
-
-
 
     public void forLoop(){
+        int x = 10;
+        int y = x++;
+        int z = ++x;
 
-        // Expected output -- 2 x 1 = 2
-        int N = 2;
-        for(int i=1; i<=10; i++){
-            System.out.println(N +" "+"x"+ " " + i+ " " + "=" + " " +N*i);
-        }
+        System.out.println("x-->" + x);
+        System.out.println("y-->" + y);
+        System.out.println("z-->" + z);
     }
 }

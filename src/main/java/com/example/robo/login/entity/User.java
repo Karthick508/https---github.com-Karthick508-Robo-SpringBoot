@@ -8,16 +8,17 @@ import javax.persistence.Table;
 
 import lombok.Data;
 
-@Data
 @Entity
 @Table(name="USERS")
+@Data
 public class User {
-    @Id
-    @Column(name = "V_PASSWORD")
-    private String password;
 
+    @Id
     @Column(name = "V_USER_NAME")
     private String userName;
     
+    @Column(name = "V_PASSWORD")
+    private String password;
+
 
 }
